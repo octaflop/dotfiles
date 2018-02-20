@@ -1,0 +1,10 @@
+ssh/.ssh/id_rsa
+ssh/.ssh/known_hosts
+
+bash/.bash_history
+
+zsh/.zsh_history
+zsh/.zsh-update
+
+.*.swp
+

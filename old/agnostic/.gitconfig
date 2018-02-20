@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Faris Chebib
+	email = faris.chebib@teem.com
+[rerere]
+    enabled = 1
+    autoupdate = 1

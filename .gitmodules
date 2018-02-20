@@ -1,0 +1,3 @@
+[submodule "bin/.bin"]
+	path = bin/.bin
+	url = git@github.com:octaflop/bin.git
