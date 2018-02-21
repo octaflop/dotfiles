@@ -1,22 +1,43 @@
+
 !!Apperance
+
 *internalBorder:        18
 *externalBorder:        8
-urxvt.termName: rxvt-unicode
-urxvt*geometry: 84x24
-urxvt.scrollBar: false
+URxvt.termName: rxvt-unicode-256color
+URxvt*geometry: 84x24
+URxvt.scrollBar: false
 !! Font preferences
-urxvt.font: xft:Anonymice Powerline:pixelsize=14
-urxvt.boldFont: xft:Anonymice Powerline Bold:pixelsize=14:weight=bold
+Xft.dpi:                96
+Xft.autohint:           0       
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.lcdfilter:          lcddefault
+Xft.hintstyle:          hintsfull
+
+URxvt.font: xft:Anonymice Powerline:pixelsize=14
+URxvt.boldFont: xft:Anonymice Powerline:pixelsize=14:weight=bold
+URxvt.letterSpace: 0
+
+!!URxvt.transparent: true
+!!URxvt.shading: 20
+URxvt*depth: 32
+!!URxvt*background: rgba:0000/0000/0200/c800
+
 !! Larger history limit
-urxvt.saveLines: 1000000
+URxvt.saveLines: 1000000
 
 !! Copy and Paste
-urxvt.keysym.Control-C : perl:clipboard:copy
-urxvt.keysym.Control-V : perl:clipboard:paste
+URxvt.keysym.Control-C : perl:clipboard:copy
+URxvt.keysym.Control-V : perl:clipboard:paste
+URxvt.iso14755:            false
+URxvt.iso14755_52:         false
 
 ! special
 *.foreground:   #c5c8c6
 *.background:   #1d1f21
+!!URxvt.background: [70]#000000
+URxvt.background: [70]#000000
 *.cursorColor:  #c5c8c6
 
 ! black
