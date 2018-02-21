@@ -25,7 +25,8 @@ URxvt.letterSpace: 0
 
 ! Composited Transparency
 URxvt.depth: 32
-URxvt.background: rgba:0000/0000/0200/c800
+!URxvt.background: rgba:1111/0000/0200/c800
+URxvt.background: [85]#000000
 
 !! Larger history limit
 URxvt.saveLines: 1000000
@@ -39,7 +40,6 @@ URxvt.iso14755_52:         false
 ! special
 !*.foreground:   #c5c8c6
 !!*.background:   #1d1f21
-!!URxvt.background: [70]#000000
 !!URxvt.background: [70]#000000
 *.cursorColor:  #c5c8c6
 

@@ -175,12 +175,12 @@ bindsym $mod+x mode "$mode_display"
 
 for_window [class="^.*"] border pixel 0
 
-gaps inner 10
+gaps inner 25
 gaps outer 10
-workspace 2 gaps inner 0
-workspace 2 gaps outer 10
-workspace 3 gaps inner 10
-workspace 3 gaps outer 0
+#workspace 2 gaps inner 0
+#workspace 2 gaps outer 10
+#workspace 3 gaps inner 10
+#workspace 3 gaps outer 0
 smart_gaps on
 
 
@@ -204,7 +204,13 @@ client.background       $bg
 # PROTIP: You can also dynamically set dmenu's colors this way:
 bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 
+# Use wal to swap the desktop
+bindsym $mod+Shift+w exec "wal -i $HOME/Feel/desktops -a 85"
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+exec --no-startup-id ~/.startup.sh
+
