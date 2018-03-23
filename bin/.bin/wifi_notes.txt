@@ -1,0 +1,11 @@
+# THIS ONE WORKS
+git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git
+make
+sudo make install
+
+# Shouldn't need to copy the *DAT files or do anything to network manager
+
+# DKMS ?
+sudo dkms add ./mt7610u_wifi_sta_v3002_dpo_20130916
+sudo dkms install <?> -m 8112au -v 1.0
+

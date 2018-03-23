@@ -1,0 +1,6 @@
+#!/bin/sh
+ls -1tr Sunset_Timelapse_April_1st_0* | grep -v sunset_files.txt > sunset_files.txt &&
+mencoder -nosound -noskip -oac copy -ovc copy -o sunset.avi -mf fps=20 'mf://@sunset_files.txt' &&
+ffmpeg -i sunset.avi -y -qscale 0 -vf scale=1920:1440,crop=1920:1080 sunset_final.avi
+
+
