@@ -1,0 +1,11 @@
+#!/bin/sh
+#ffmpeg -i $1 -vcodec libx264 -acodec aac -strict experimental -pre slow -crf 22 -s hd720 -b 5000k -ab 320k -r 25 -g 25 -threads 0 $2.mp4
+
+ffmpeg \
+	-s 1920x1080 -f x11grab -i :0.0 \
+	-f alsa -i pulse \
+	-vcodec libx264 -b 5000k \
+	-acodec aac -strict experimental \
+	-af highpass=f=20,lowpass=f=3000 \
+	-s hd1080 -ab 320k -r 25 -g 25 -threads 0 $2.mp4 
+

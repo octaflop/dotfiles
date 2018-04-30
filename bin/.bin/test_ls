@@ -1,0 +1,5 @@
+#!/bin/sh
+for i in *.CR2 ;
+    do echo $i;
+done
+

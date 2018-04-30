@@ -1,0 +1,12 @@
+#!/bin/sh
+mkdir $1;
+for i in *.CR2;
+	do darktable-cli "$i" ./$1/$i.jpg;
+done &&
+cd $1 &&
+~/Dropbox/scripts/timelapse-deflicker.pl &&
+cd Deflickered &&
+ffmpeg -r 29.97 -f image2 -pattern_type glob -i "*.jpg" -vf scale=1280:-1,format=yuv420p -vcodec libx264 $1.avi &&
+~/Dropbox/scripts/noaudio_html_optimize $1.avi $2
+# && rm $1.avi
+

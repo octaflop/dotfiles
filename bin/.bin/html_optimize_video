@@ -1,0 +1,26 @@
+#!/bin/sh
+# Converts input videos to html5 videos
+# requires latest version of ffmpeg to be installed
+# Follow directions at: https://www.ffmpeg.org/download.html to install for your system
+# Note that pre ubuntu 15.04 installations will have a bad version of ffmpeg due to
+# stupid dev drama, so get the correct PPA
+
+# Compilation directions: https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
+# After the tar dl, run ubuntu_install_ffmpeg.sh from the ffmpeg subdirectory in the untared folder
+
+# Scripts from: https://stackoverflow.com/questions/5487085/ffmpeg-convert-html-5-video-not-working
+# the "-an" flag will remove audio
+
+# ffmpeg -y -i $1 -s 1280x720 -c:v libx264 -b 3M -strict -2 -movflags faststart -an $2
+
+ffmpeg -i "$1" -b:v 1500k -vcodec libx264 -strict -2 -movflags faststart -g 30 "$2.mp4" &&
+ffmpeg -i "$1" -b:v 1500k -vcodec libtheora -ab 160000 -g 30 "$2.ogg" &&
+ffmpeg -i "$1" -b:v 1500k -vcodec libvpx -f webm -g 30 "$2.webm"
+
+# Reference
+# Gotta figure out the "slow preset"
+# ~/bin/ffmpeg -i "$1" -b:v 1500k -vcodec libx264 -an -vpre slow -vpre baseline -g 30 "$2.mp4" &&
+# ffmpeg -i "$1" -b 1500k -vcodec libx264 -vpre slow -vpre baseline -g 30 -an "$2.mp4"
+# ffmpeg -i "$1"  -b 1500k -vcodec libvpx -acodec libvorbis -ab 160000 -f webm -g 30 -an "$2.webm"
+# TODO: make a compilation for libtheora or get a ppa that already has it linked.
+# ffmpeg -i "$1" -b 1500k -vcodec libtheora -acodec libvorbis -ab 160000 -g 30 -an "$2.ogg"

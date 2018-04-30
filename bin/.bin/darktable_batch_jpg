@@ -1,0 +1,2 @@
+#!/bin/sh
+for i in *.CR2 ; do darktable-cli "$i" $1_$i.jpg ; done

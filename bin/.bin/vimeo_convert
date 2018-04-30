@@ -1,0 +1,2 @@
+#!/bin/sh
+ffmpeg -i $1 -c:v libx264 -preset slower -crf 20 -c:a aac -strict experimental -b:a 192k -ac 2 -movflags +faststart $2.mp4
