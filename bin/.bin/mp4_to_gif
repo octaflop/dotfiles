@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# DEPS
+# sudo apt-get install imagemagick mplayer
+
+while [[ $(mplayer -ao null $1 -vo jpeg:outdir=$2) -eq 0 ]]; do sleep 1; done &&
+convert $2/* $2.gif &&
+# convert $2.gif -fuzz 10% -layers Optimize $2_optimized.gif
+gifsicle -O3 $2.gif -o $2_optimized.gif
+
+
