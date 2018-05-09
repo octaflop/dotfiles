@@ -1,4 +1,5 @@
 alias dc='docker-compose'
+alias dm='docker-machine'
 
 alias eb='cd ~/workspace/projects/work/eventboard.io && workon eb'
 alias starteb='eb && dc up -d && dc logs -f web'
