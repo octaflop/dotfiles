@@ -67,6 +67,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
+# Go Stuff, via dotfiles
+export PATH="$HOME/go/bin:$PATH"
+
 # Python Stuff
 export PATH="$HOME/.local/bin:$PATH"
 
