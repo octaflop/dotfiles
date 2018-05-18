@@ -105,7 +105,6 @@ export WORKON_HOME=~/.virtualenvs/
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 source /home/faris/.local/bin/virtualenvwrapper.sh
 
-export PATH="$(yarn global bin):$PATH"
 
 GPG_TTY=$(tty)
 export GPG_TTY
