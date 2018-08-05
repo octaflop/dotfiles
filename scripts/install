@@ -1,0 +1,70 @@
+# Dotfiles
+git clone git@github.com:octaflop/dotfiles.git ~/dotfiles
+
+sudo apt install vim stow zsh git openssh
+sudo apt install gnome-shell-extension-appindicator
+
+# Docker
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt update
+sudo apt-get install docker-ce
+sudo usermod -aG docker $USER
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Python
+sudo apt install python-pip python3-pip
+pip install flake8 --user
+pip3 install thefuck virtualenv virtualenvwrapper jedi
+
+# Other stuff
+mkdir -p /home/$USER/.cache/wal/
+touch /home/$USER/.cache/wal/colors-tty.sh
+touch /home/$USER/.cache/wal/sequences
+
+# Keybase
+curl -O https://prerelease.keybase.io/keybase_amd64.deb
+# if you see an error about missing `libappindicator1`
+# from the next command, you can ignore it, as the
+# subsequent command corrects it
+sudo dpkg -i keybase_amd64.deb
+sudo apt-get install -f
+run_keybase
+
+# Yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt-get install yarn
+
+sudo apt install alien libgconf-2-4 libudev1
+
+# COPY SSH STUFF
+
+cd ~/dotfiles
+stow zsh
+stow bash
+stow git
+stow bin
+stow hyper
+
+
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+#cd /lib/x86_64-linux-gnu/
+#sudo ln -s libudev.so.1.6.9 libudev.so.0
+# Download https://www.bluejeans.com/downloads
+#sudo alien --to-deb bluejeans...rpm
+#sudo dpkg -i bluejeans...deb
+#ln -s /opt/bluejeans/bluejeans-bin ~/bin/bluejeans
+
+
