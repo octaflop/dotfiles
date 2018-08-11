@@ -216,3 +216,5 @@ exec --no-startup-id ~/.startup.sh
 exec --no-startup-id nm-applet
 
 exec setxkbmap -option caps:swapescape
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+
