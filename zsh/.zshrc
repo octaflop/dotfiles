@@ -85,3 +85,4 @@ source ~/.cache/wal/colors-tty.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
 
+alias chromium="/usr/bin/chromium-browser --password-store=gnome"

@@ -214,5 +214,28 @@ bindsym $mod+Shift+w exec "wal -i $HOME/workspace/src/wallpapers/scaled/ -a 85"
 
 exec --no-startup-id ~/.startup.sh
 exec --no-startup-id nm-applet
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
 exec setxkbmap -option caps:swapescape
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
