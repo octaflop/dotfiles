@@ -1,0 +1,4 @@
+#!/bin/bash
+# Ensures that scripts are also able to be run
+compgen -ac | sort -u | dmenu "$@" | ${SHELL:-"/bin/bash"} &
+
