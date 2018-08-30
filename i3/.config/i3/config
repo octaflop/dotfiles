@@ -123,6 +123,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock i3 (lock your screen)
 bindsym $mod+z exec "i3lock-fancy"
+# lock and suspend
+bindsym $mod+p exec "sudo pm-suspend | i3lock-fancy"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -158,12 +160,12 @@ bar {
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+set $mode_display Set display: (w) Work mode, two screens (h) Home mode, two screens (s) Single highres (l) Single lowres
 mode "$mode_display" {
-    bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of LVDS1, mode "default"
-    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+    bindsym w exec ~/.screenlayout/shamu/work.sh, mode "default"
+    bindsym s exec ~/.screenlayout/shamu/highressingle.sh, mode "default"
+    bindsym l exec ~/.screenlayout/shamu/lowressingle.sh, mode "default"
+    bindsym h exec mode "default" ~/.screenlayout/shamu/home.sh, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -220,3 +222,7 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
 exec setxkbmap -option caps:swapescape
+
+# Screenshot
+bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"

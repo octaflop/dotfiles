@@ -6,5 +6,7 @@ bash/.bash_history
 zsh/.zsh_history
 zsh/.zsh-update
 
+bin/.bin/ngrok
+
 .*.swp
 
