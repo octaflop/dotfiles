@@ -33,8 +33,9 @@ alias cloak='/home/faris/ink/cloak_vpn/start.sh'
 
 alias zp='cd ~/workspace/projects/zaneprep && workon zaneprep'
 
+alias utah='cd ~/workspace/projects/utah'
 alias slcpy='cd ~/workspace/projects/slcpy.com && workon slcpy'
-alias startslcpy='slcpy && ./manage.py runserver'
+alias startslcpy='slcpy && docker-compose up -d'
 
 alias pastryio='cd ~/workspace/projects/pastryio && workon pastryio'
 alias startpastryio='pastryio && ./manage.py runserver'
