@@ -220,6 +220,8 @@ exec --no-startup-id ~/.startup.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id compton
+#exec --no-startup-id compton -cCGfF -b -i 0.85 --vsync opengl
 
 exec setxkbmap -option caps:swapescape
 
