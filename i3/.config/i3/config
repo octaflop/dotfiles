@@ -225,6 +225,10 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 #exec --no-startup-id compton -cCGfF -b -i 0.85 --vsync opengl
 
 exec setxkbmap -option caps:swapescape
+exec setxkbmap -option compose:rctrl
+
+# Sometimes the keymapping disappears...
+bindsym $mod+c exec "exec setxkbmap -option caps:swapescape && exec setxkbmap -option compose:rctrl"
 
 # Screenshot
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
