@@ -162,7 +162,7 @@ bar {
 # Set the shortcuts and what they do
 set $mode_display Set display: (w) Work mode, two screens (h) Home mode, two screens (s) Single highres (l) Single lowres
 mode "$mode_display" {
-    bindsym w exec ~/.screenlayout/shamu/work.sh, mode "default"
+    bindsym w exec ~/.screenlayout/shamu/tripwork.sh, mode "default"
     bindsym s exec ~/.screenlayout/shamu/highressingle.sh, mode "default"
     bindsym l exec ~/.screenlayout/shamu/lowressingle.sh, mode "default"
     bindsym h exec mode "default" ~/.screenlayout/shamu/home.sh, mode "default"
@@ -221,6 +221,7 @@ exec --no-startup-id ~/.startup.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id dunst 
 #exec --no-startup-id compton
 #exec --no-startup-id compton -cCGfF -b -i 0.85 --vsync opengl
 

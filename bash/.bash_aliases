@@ -4,6 +4,8 @@ alias dm='docker-machine'
 alias eb='cd $HOME/workspace/projects/eventboard.io && workon eb'
 alias starteb='eb && dc up -d && dc logs -f web'
 alias o='octoeb'
+alias ef='cd $HOME/workspace/projects/ender-front/ember-deployment'
+alias startef='ef && ember server'
 
 alias weather="curl -k https://wttr.in/SLC"
 
