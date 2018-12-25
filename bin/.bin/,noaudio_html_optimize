@@ -13,9 +13,9 @@
 
 # ffmpeg -y -i $1 -s 1280x720 -c:v libx264 -b 3M -strict -2 -movflags faststart -an $2
 
-~/bin/ffmpeg -i "$1" -b:v 1500k -vcodec libx264 -an -strict -2 -movflags faststart -g 30 "$2.mp4" &&
-~/bin/ffmpeg -i "$1" -b:v 1500k -vcodec libtheora -ab 160000 -g 30 -an "$2.ogg" &&
-~/bin/ffmpeg -i "$1" -b:v 1500k -vcodec libvpx -an -f webm -g 30 "$2.webm"
+ffmpeg -i "$1" -b:v 1500k -vcodec libx264 -an -strict -2 -movflags faststart -g 30 "$2.mp4" &&
+ffmpeg -i "$1" -b:v 1500k -vcodec libtheora -ab 160000 -g 30 -an "$2.ogg" &&
+ffmpeg -i "$1" -b:v 1500k -vcodec libvpx -an -f webm -g 30 "$2.webm"
 
 # Reference
 # Gotta figure out the "slow preset"
