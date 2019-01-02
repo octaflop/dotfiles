@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/home/faris/anaconda3/bin/python",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code'",
+    "vim.easymotionMarkerFontFamily": "'Fira Code'",
+    "keyboard.dispatch": "keyCode"
+}

@@ -8,5 +8,9 @@ zsh/.zsh-update
 
 bin/.bin/ngrok
 
+VSCode/.config/Code/User/workspaceStorage
+VSCode/.config/Code/User/globalStorage
+
+
 .*.swp
 
