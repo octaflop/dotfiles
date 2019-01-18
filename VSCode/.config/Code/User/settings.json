@@ -3,5 +3,7 @@
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Fira Code'",
     "vim.easymotionMarkerFontFamily": "'Fira Code'",
-    "keyboard.dispatch": "keyCode"
+    "keyboard.dispatch": "keyCode",
+    "workbench.colorTheme": "Solarized Dark",
+    "window.zoomLevel": 1
 }
