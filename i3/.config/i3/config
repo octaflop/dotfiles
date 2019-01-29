@@ -161,11 +161,12 @@ bar {
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Set display: (w) Work mode, two screens (h) Home mode, two screens (s) Single highres (l) Single lowres
+set $mode_display Set display: (w) Work mode, two screens (h) Home mode, two screens (s) Single highres (l) Single lowres (f) Focus
 mode "$mode_display" {
     bindsym w exec ~/.screenlayout/shamu/tripwork.sh, mode "default"
     bindsym s exec ~/.screenlayout/shamu/highressingle.sh, mode "default"
     bindsym l exec ~/.screenlayout/shamu/lowressingle.sh, mode "default"
+    bindsym f exec ~/.screenlayout/shamu/focus.sh, mode "default"
     bindsym h exec mode "default" ~/.screenlayout/shamu/home.sh, mode "default"
 
     # back to normal: Enter or Escape
