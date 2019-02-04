@@ -167,7 +167,7 @@ mode "$mode_display" {
     bindsym s exec ~/.screenlayout/shamu/highressingle.sh, mode "default"
     bindsym l exec ~/.screenlayout/shamu/lowressingle.sh, mode "default"
     bindsym f exec ~/.screenlayout/shamu/focus.sh, mode "default"
-    bindsym h exec mode "default" ~/.screenlayout/shamu/home.sh, mode "default"
+    bindsym h exec ~/.screenlayout/shamu/dualhome.sh, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -211,8 +211,7 @@ client.background       $bg
 # bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 
 # Use wal to set colorscheme and cache the desktop
-bindsym $mod+Shift+w exec "$HOME/.bin/,wal-bg.sh $HOME/workspace/src/wallpapers/scaled/"
-
+bindsym $mod+Shift+w exec "$HOME/.bin/,wal-bg.sh $HOME/wallpapers/"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -224,7 +223,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id dunst 
-#exec --no-startup-id compton
+exec --no-startup-id compton
 #exec --no-startup-id compton -cCGfF -b -i 0.85 --vsync opengl
 
 exec setxkbmap -option caps:swapescape
@@ -232,6 +231,9 @@ exec setxkbmap -option compose:rctrl
 
 # Sometimes the keymapping disappears...
 bindsym $mod+c exec "exec setxkbmap -option caps:swapescape && exec setxkbmap -option compose:rctrl"
+
+# Manually start compton
+bindsym $mod+Shift+c exec "exec --no-startup-id compton"
 
 # Screenshot
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"

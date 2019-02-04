@@ -1,0 +1,14 @@
+/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /home/faris/go/bin/golint
+
+/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /usr/bin/go build -i -o /tmp/vscode-goeJifNz/go-code-check github.com/octaflop/stringutil
+/home/faris/go/src/github.com/octaflop/stringutil/reverse.go:1: expected 'package', found 'EOF'
+
+/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /usr/bin/go vet ./...
+/home/faris/go/src/github.com/octaflop/stringutil/reverse.go:1: expected 'package', found 'EOF'
+
+/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /home/faris/go/bin/golint
+
+/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /usr/bin/go build -i -o /tmp/vscode-goeJifNz/go-code-check github.com/octaflop/stringutil
+
+/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /usr/bin/go vet ./...
+
