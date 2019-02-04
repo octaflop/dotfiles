@@ -94,3 +94,6 @@ compinit
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
+# Compeltion for aws
+source $HOME/.local/bin/aws_zsh_completer.sh
+
