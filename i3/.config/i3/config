@@ -167,7 +167,7 @@ mode "$mode_display" {
     bindsym s exec ~/.screenlayout/shamu/highressingle.sh, mode "default"
     bindsym l exec ~/.screenlayout/shamu/lowressingle.sh, mode "default"
     bindsym f exec ~/.screenlayout/shamu/focus.sh, mode "default"
-    bindsym h exec mode "default" ~/.screenlayout/shamu/home.sh, mode "default"
+    bindsym h exec ~/.screenlayout/shamu/dualhome.sh, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"

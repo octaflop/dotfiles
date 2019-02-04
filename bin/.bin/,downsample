@@ -1,0 +1,20 @@
+#!/bin/bash
+
+shopt -s nullglob
+mkdir -p {1080down,1152down}
+
+FILES=("$@")
+for i in "${FILES[@]}"
+do
+	echo "Processing $i"
+	# 1920x1080
+	# uncomment to disable gpu
+	#ffmpeg -y -i "$i" -vf scale=1920:-2,setsar=1:1 -c:v libx264 -c:a copy -r 29.97 "./1080down/$i.mp4"
+	ffmpeg -y -i "$i" -vf scale=1920:-2,setsar=1:1 -c:v h264_nvenc -preset slow -b:v 5M -c:a copy -r 29.97 "./1080down/$i.mp4"
+	# 2048x1152
+	# uncomment to disable gpu
+	#ffmpeg -y -i "$i" -vf scale=2048:-2,setsar=1:1 -c:v libx264 -c:a copy -r 29.97 "./1152down/$1.mp4"
+	ffmpeg -y -i "$i" -vf scale=2048:-2,setsar=1:1 -c:v h264_nvenc -preset slow -b:v 5M -c:a copy -r 29.97 "./1152down/$i.mp4"
+	echo "Processed $i"
+done
+
