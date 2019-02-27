@@ -12,8 +12,18 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Installed by us
+" Installed by me
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'majutsushi/tagbar'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mattn/emmet-vim'
+
+Plugin 'airblade/vim-gitgutter'
 
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
@@ -23,6 +33,10 @@ Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Custom Key Bindings
+map <C-n> :NERDTreeToggle<CR>
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
