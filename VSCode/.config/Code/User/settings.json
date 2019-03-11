@@ -12,5 +12,9 @@
     },
     "[css]" : {
         "editor.tabSize": 2
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
     }
 }
