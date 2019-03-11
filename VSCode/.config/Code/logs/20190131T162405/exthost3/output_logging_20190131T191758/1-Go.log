@@ -1,6 +1,0 @@
-/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /home/faris/go/bin/golint
-
-/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /usr/bin/go build -i -o /tmp/vscode-goBPRSAp/go-code-check github.com/octaflop/stringutil
-
-/home/faris/go/src/github.com/octaflop/stringutil>Finished running tool: /usr/bin/go vet ./...
-

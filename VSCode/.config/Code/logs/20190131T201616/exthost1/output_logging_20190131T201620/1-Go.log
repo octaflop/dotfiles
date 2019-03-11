@@ -1,7 +1,0 @@
-/home/faris/go/src/github.com/octaflop/gowiki>Finished running tool: /home/faris/go/bin/golint
-/home/faris/go/src/github.com/octaflop/gowiki/wiki.go:11: exported type Page should have comment or be unexported
-
-/home/faris/go/src/github.com/octaflop/gowiki>Finished running tool: /usr/bin/go vet ./...
-
-/home/faris/go/src/github.com/octaflop/gowiki>Finished running tool: /usr/bin/go build -i -o /tmp/vscode-gonsTsXH/go-code-check github.com/octaflop/gowiki
-
