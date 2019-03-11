@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "/home/faris/anaconda3/bin/python",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code'",
+    "vim.easymotionMarkerFontFamily": "'Fira Code'",
+    "keyboard.dispatch": "keyCode",
+    "workbench.colorTheme": "Solarized Dark",
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false,
+    "[html]" : {
+        "editor.tabSize": 2
+    },
+    "[css]" : {
+        "editor.tabSize": 2
+    }
+}
