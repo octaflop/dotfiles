@@ -37,6 +37,8 @@ filetype plugin indent on    " required
 " Custom Key Bindings
 map <C-n> :NERDTreeToggle<CR>
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "

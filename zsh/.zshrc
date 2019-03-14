@@ -97,3 +97,7 @@ kitty + complete setup zsh | source /dev/stdin
 # Compeltion for aws
 source $HOME/.local/bin/aws_zsh_completer.sh
 
+# Ruby gems in ~/.gems
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/gems/bin:$PATH"
+
