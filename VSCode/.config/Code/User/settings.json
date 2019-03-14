@@ -7,10 +7,10 @@
     "workbench.colorTheme": "Solarized Dark",
     "window.zoomLevel": 1,
     "explorer.confirmDelete": false,
-    "[html]" : {
+    "[html]": {
         "editor.tabSize": 2
     },
-    "[css]" : {
+    "[css]": {
         "editor.tabSize": 2
     },
     "files.exclude": {
@@ -18,8 +18,7 @@
         "**/*.pyc": true
     },
     "vim.overrideCopy": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
+    "vim.normalModeKeyBindingsNonRecursive": [{
             "before": [":"],
             "commands": [
                 "workbench.action.showCommands",
@@ -31,5 +30,9 @@
                 ":wq"
             ]
         }
-    ]
+    ],
+    "vim.handleKeys": {
+        "<C-d>": false,
+        "<C-k>": false,
+    }
 }
