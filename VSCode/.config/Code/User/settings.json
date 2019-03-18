@@ -34,5 +34,6 @@
     "vim.handleKeys": {
         "<C-d>": false,
         "<C-k>": false,
-    }
+    },
+    "window.titleBarStyle": "custom",
 }
