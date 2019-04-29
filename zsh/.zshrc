@@ -116,6 +116,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-keychain id_rsa
-. ~/.keychain/`uname -n`-sh
+keychain --quiet -Q id_rsa
+
 
