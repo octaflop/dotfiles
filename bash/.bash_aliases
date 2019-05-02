@@ -86,7 +86,9 @@ alias startegghead='egghead && json-server database.json'
 alias luckyflask='cd ~/workspace/projects/lucky_flask && workon lucky_flask'
 alias startlucky='luckyflask && cd apps/03_frysauce/ && python run.py'
 
-alias pycon='cd ~/workspace/projects/pycon2016 && workon pycon2016'
+# This changes every year :)
+alias pycon2016='cd ~/workspace/projects/pycon2016 && workon pycon2016'
+alias pycon='cd ~/workspace/projects/pycon2019'
 
 alias upython='cd ~/workspace/projects/utahpython.github.com'
 alias startupy='upython && jekyll serve'
@@ -102,6 +104,8 @@ alias lexfashion='cd ~/workspace/projects/lexie_fashion'
 alias lexphotos='cd ~/workspace/projects/lexie_photos'
 
 alias djmusic='cd ~/workspace/projects/django_music && workon djmusic'
+
+alias meethelp='cd ~/workspace/projects/meetup_help'
 
 
 export WORKON_HOME=~/.virtualenvs/
