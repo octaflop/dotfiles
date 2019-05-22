@@ -107,6 +107,8 @@ alias djmusic='cd ~/workspace/projects/django_music && workon djmusic'
 
 alias meethelp='cd ~/workspace/projects/meetup_help'
 
+alias datehelp='cd ~/workspace/projects/pycon2019/pycon-us-2019-dealing-with-datetimes && source activate dt'
+
 
 export WORKON_HOME=~/.virtualenvs/
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
