@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# 1. Copy this to file to somewhere on your PATH as sb:
+#    $ cp ./sb-cmd-example /usr/local/bin/sb
+# 2. Install SuperBenchmarker (https://github.com/aliostad/SuperBenchmarker).
+# 3. Change the path to your built DLL below.
+# 4. Check sb works with:
+#    $ sb --version
+
+dotnet '/home/faris/workspace/src/SuperBenchmarker/src/SuperBenchmarker/bin/Debug/netcoreapp2.0/SuperBenchmarker.dll' "$@"

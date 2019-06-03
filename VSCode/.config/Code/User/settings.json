@@ -90,4 +90,5 @@
             "value": "#647b86"
         }
     ],
+    "git.autofetch": true,
 }

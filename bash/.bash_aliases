@@ -118,3 +118,5 @@ source /home/faris/.local/bin/virtualenvwrapper.sh
 GPG_TTY=$(tty)
 export GPG_TTY
 
+
+alias wing='cd ~/workspace/projects/justwingit'
