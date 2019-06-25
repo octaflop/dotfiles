@@ -1,9 +1,10 @@
 [user]
 	name = Faris Chebib
 	email = faris@theluckybead.com
-	# Revoked
+	signingkey = 1eb9a4c813d20128f9e31dce403ead145c572bb2
+	# Deprecated
 	# signingkey = 7F9BC856C4CD24FD
-	signingkey = 25E5DD9E5DAC070F
+	# signingkey = 25E5DD9E5DAC070F
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -41,3 +42,6 @@
 	gpgsign = true
 [core]
 	editor = vim
+[pull]
+	ff = only
+
