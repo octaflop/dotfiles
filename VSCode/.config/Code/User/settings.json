@@ -5,7 +5,7 @@
     "vim.easymotionMarkerFontFamily": "'Fira Code'",
     "keyboard.dispatch": "keyCode",
     "workbench.colorTheme": "Electron",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "explorer.confirmDelete": false,
     "[html]": {
         "editor.tabSize": 2

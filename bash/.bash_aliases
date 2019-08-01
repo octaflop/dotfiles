@@ -2,6 +2,8 @@ alias dc='docker-compose'
 alias dm='docker-machine'
 
 alias eb='cd $HOME/workspace/projects/eventboard.io && workon eb'
+alias dg='cd $HOME/workspace/projects/insights-data-grabber && workon grabber'
+alias dep='cd $HOME/workspace/projects/teem-dev-deploy'
 alias starteb='eb && dc up -d && dc logs -f web'
 alias o='octoeb'
 alias ef='cd $HOME/workspace/projects/ender-front/ember-deployment'
@@ -10,7 +12,7 @@ alias startef='ef && ember server'
 alias weather="curl -k https://wttr.in/SLC"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status anaconda time battery)
 POWERLEVEL9K_HIDE_BRANCH_ICON=false
 POWERLEVEL9K_SHOW_CHANGESET=false
 POWERLEVEL9K_CHANGESET_HASH_LENGTH=12
