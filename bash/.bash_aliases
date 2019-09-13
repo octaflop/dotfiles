@@ -2,7 +2,7 @@ alias dc='docker-compose'
 alias dm='docker-machine'
 
 alias eb='cd $HOME/workspace/projects/eventboard.io && workon eb'
-alias dg='cd $HOME/workspace/projects/insights-data-grabber && workon grabber'
+alias dg='cd $HOME/workspace/projects/insights-data-grabber && . .venv/bin/activate'
 alias dep='cd $HOME/workspace/projects/teem-dev-deploy'
 alias starteb='eb && dc up -d && dc logs -f web'
 alias o='octoeb'

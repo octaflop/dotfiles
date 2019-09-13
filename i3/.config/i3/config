@@ -227,8 +227,14 @@ exec --no-startup-id dunst
 exec --no-startup-id compton
 # exec --no-startup-id compton -cCGfF -b -i 0.85 --vsync opengl
 
-exec setxkbmap -option caps:swapescape
-exec setxkbmap -option compose:rctrl
+#exec setxkbmap -option caps:swapescape
+#exec setxkbmap -option compose:rctrl
+
+# swap caps lock and escape
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+exec_always --no-startup-id xmodmap -e "keycode 105 = Multi_key"
 
 # Sometimes the keymapping disappears...
 bindsym $mod+c exec "exec setxkbmap -option caps:swapescape && exec setxkbmap -option compose:rctrl"

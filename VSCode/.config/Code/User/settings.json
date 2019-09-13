@@ -95,4 +95,7 @@
         }
     ],
     "git.autofetch": true,
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
 }
