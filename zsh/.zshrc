@@ -101,6 +101,10 @@ source $HOME/.local/bin/aws_zsh_completer.sh
 export GEM_HOME="$HOME/.gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+# Golang
+export GOPATH="$HOME/go"
+export PATH="$HOME/go/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/faris/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
