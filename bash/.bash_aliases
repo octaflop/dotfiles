@@ -11,6 +11,8 @@ alias startef='ef && ember server'
 
 alias weather="curl -k https://wttr.in/SLC"
 
+alias nvta='cd $HOME/workspace/projects/nvta'
+
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status anaconda time battery)
 POWERLEVEL9K_HIDE_BRANCH_ICON=false
@@ -113,8 +115,8 @@ alias datehelp='cd ~/workspace/projects/pycon2019/pycon-us-2019-dealing-with-dat
 
 
 export WORKON_HOME=~/.virtualenvs/
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
-source /home/faris/.local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/Library/Python/3.7/bin/virtualenvwrapper.sh
 
 
 GPG_TTY=$(tty)
